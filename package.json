@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "allure-codeceptjs": "^3.4.2",
+    "codeceptjs": "^3.7.5",
+    "playwright": "^1.56.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "allure-commandline": "^2.34.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "test": "codeceptjs run --verbose",
+    "test:ui": "codeceptjs run",
+    "test:grep": "codeceptjs run --grep",
+    "test:complete-purchase": "codeceptjs run --grep \"Add all items, remove third item, and complete purchase\"",
+    "test:problem-user": "codeceptjs run --grep \"Login as problem_user, find item, add to cart, and validate\"",
+    "test:sort-products": "codeceptjs run --grep \"Login as standard_user and validate product sorting\"",
+    "test:locked-out": "codeceptjs run --grep \"Attempt to login as locked_out_user and validate failure\""
+  }
+}
